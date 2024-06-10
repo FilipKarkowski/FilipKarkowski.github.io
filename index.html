@@ -118,11 +118,11 @@
       document.body.appendChild(script);
 
     </script>
-    <script type="text/javascript">
-      window.addEventListener("resize", () => {
-          document.getElementById("unityContainer").style.width = `${innerWidth}px`;
-          document.getElementById("unityContainer").style.height = `${innerHeight}px`;
-      });
-    </script>
+    <script>
+      var mywidth = innerWidth;
+      var myheight = innerHeight;
+          document.getElementById("unityContainer").style.width = mywidth + "px";
+          document.getElementById("unityContainer").style.height = myheight + "px";
+      </script>
   </body>
 </html>
