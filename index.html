@@ -38,6 +38,17 @@
       // Modify or remove this function to customize the visually presented
       // way that non-critical warnings and error messages are presented to the
       // user.
+      window.addEventListener('load', resizePage, false);
+      window.addEventListener('resize', resizePage, false);
+function resizePage()
+{  
+    if (gameInstance !== undefined && gameLoaded === true)
+    {
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+    }
+   
+}
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -119,10 +130,7 @@
 
     </script>
     <script>
-      var mywidth = innerWidth;
-      var myheight = innerHeight;
-          document.getElementById("unityContainer").style.width = mywidth + "px";
-          document.getElementById("unityContainer").style.height = myheight + "px";
+
       </script>
   </body>
 </html>
